@@ -4,18 +4,16 @@ class Menu{
     public List<string> _prompts = new List<string>();
 
     public Menu(){
-        _prompts.Add("What did you do today?");
-        _prompts.Add("How are you feeling8?");
-        _prompts.Add("How are you feeling7?");
-        _prompts.Add("How are you feeling6?");
-        _prompts.Add("How are you feeling5?");
-        _prompts.Add("How are you feeling4?");
-        _prompts.Add("How are you feeling3?");
-        _prompts.Add("How are you feeling2?");
-        _prompts.Add("How are you feeling1?");
+        _prompts.Add("Who was the most interesting person I interacted with today?");
+        _prompts.Add("What was the best part of my day?");
+        _prompts.Add("How did I see the hand of the Lord in my life today?");
+        _prompts.Add("What was the strongest emotion I felt today?");
+        _prompts.Add("If I had one thing I could do over today, what would it be?");
     }
+    
 
     public void Run(){
+        Journal journal = new Journal();
         while(true){
             Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
             Console.Write("What would you like to do? ");
@@ -24,20 +22,27 @@ class Menu{
         
             switch(optionInt) {
                 case 1:
-                    Entry entry = new Entry();
-                    Random rand = new Random();
-                    Console.WriteLine(_prompts[rand.Next(0,_prompts.Count()-1)]);
-                    Console.Write(">");
-                    entry._entryData = Console.ReadLine();
+                    Random rnd = new Random();
+                    int promptIndex = rnd.Next(_prompts.Count);
+                    Console.WriteLine("Prompt: " + _prompts[promptIndex]);
+                    Console.Write("Response: ");
+                    string response = Console.ReadLine();
+                    DateTime theCurrentTime = DateTime.Now;
+                    string date = theCurrentTime.ToString();
+                    journal.AddEntry(_prompts[promptIndex], response, date);
                     break;
                 case 2:
-                    Console.WriteLine("test2");
+                    journal.Display();
                     break;
                 case 3:
-                    Console.WriteLine("test3");
+                    Console.Write("Enter a filename: ");
+                    string filename = Console.ReadLine();
+                    journal.Load(filename);
                     break;
                 case 4:
-                    Console.WriteLine("test4");
+                    Console.Write("Enter a filename: ");
+                    filename = Console.ReadLine();
+                    journal.Save(filename);
                     break;
                 case 5:
                     break;
