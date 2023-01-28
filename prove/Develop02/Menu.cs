@@ -14,14 +14,17 @@ class Menu{
 
     public void Run(){
         Journal journal = new Journal();
+        int idCount = 0;
         while(true){
-            Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
+            Console.WriteLine("Please choose one of the following chocies:");
+            Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. How many entries\n6. Quit");
             Console.Write("What would you like to do? ");
             string option = Console.ReadLine();
             int.TryParse(option, out int optionInt);
         
             switch(optionInt) {
                 case 1:
+                    idCount = idCount + 1;
                     Random rnd = new Random();
                     int promptIndex = rnd.Next(_prompts.Count);
                     Console.WriteLine("Prompt: " + _prompts[promptIndex]);
@@ -29,7 +32,8 @@ class Menu{
                     string response = Console.ReadLine();
                     DateTime theCurrentTime = DateTime.Now;
                     string date = theCurrentTime.ToString();
-                    journal.AddEntry(_prompts[promptIndex], response, date);
+                    string id = idCount.ToString();
+                    journal.AddEntry(_prompts[promptIndex], response, date, id);
                     break;
                 case 2:
                     journal.Display();
@@ -45,12 +49,15 @@ class Menu{
                     journal.Save(filename);
                     break;
                 case 5:
+                    journal.Count();
+                    break;
+                case 6:
                     break;
                 default:
                     Console.WriteLine("Please enter an option number.");
                     break;
             }
-            if (optionInt == 5){
+            if (optionInt == 6){
                 break;
             }
         }

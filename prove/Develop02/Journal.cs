@@ -4,16 +4,13 @@ using System.IO;
 
 class Journal {
     public List<Entry> entries = new List<Entry>();
-    public void AddEntry(string prompt, string response, string date){
-        Entry entry = new Entry(prompt, response, date);
+    public void AddEntry(string prompt, string response, string date, string id){
+        Entry entry = new Entry(prompt, response, date, id);
         entries.Add(entry);
         } 
     public void Display(){
         foreach (Entry entry in entries){
-            Console.WriteLine("Prompt: " + entry._entryPrompt);
-            Console.WriteLine("Response: " + entry._entryData);
-            Console.WriteLine("Date: " + entry._entryDate);
-            Console.WriteLine();
+            entry.Display(entry._entryPrompt, entry._entryData, entry._entryDate);
             }
     } 
     public void Save(string filename){
@@ -22,6 +19,7 @@ class Journal {
         writer.WriteLine(entry._entryPrompt);
         writer.WriteLine(entry._entryData);
         writer.WriteLine(entry._entryDate);
+        writer.WriteLine(entry._entryId);
         }
     writer.Close();
     } 
@@ -32,6 +30,18 @@ class Journal {
         string prompt = reader.ReadLine();
         string response = reader.ReadLine();
         string date = reader.ReadLine();
-        AddEntry(prompt, response, date);
+        string id = reader.ReadLine();
+        AddEntry(prompt, response, date, id);
     }
-}}
+    }
+    public void Count(){
+        int entryId = 0;
+        foreach(Entry entry in entries){
+            int id = int.Parse(entry._entryId);
+            if (id > entryId){
+                entryId = id;
+            }
+        }
+        Console.WriteLine($"You have made a total of {entryId} entries in this journal.");
+    }
+}
