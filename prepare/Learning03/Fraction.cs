@@ -15,14 +15,14 @@ class Fraction{
         _top = top;
         _bottom = bottom;
     }
-    public void GetTop(){
-        Console.WriteLine(_top);
+    public int GetTop(){
+        return _top;
     }
     public void SetTop(int top){
         _top = top;
     }
-    public void GetBottom(){
-        Console.WriteLine(_bottom);
+    public int GetBottom(){
+        return _bottom;
 
     }
     public void SetBottom(int bottom){
