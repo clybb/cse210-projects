@@ -14,7 +14,7 @@ class Scripture{
     public void HideWords(int count){
         for (int i=0; i<count; i++){
             Random random = new Random();
-            int randomNmber = random.Next(1, _word.Count()-1);
+            int randomNmber = random.Next(0, _word.Count());
             var word = _word[randomNmber];
             word.Hide();
         }
@@ -23,13 +23,13 @@ class Scripture{
         return false;
     }
     public void Display(){
-        Console.Clear();
+        Console.Clear();//clear console
         while (IsCompletlyHidden() != true){
-        string sentance = null;
+        string sentance = null;//create empty sentance variable
         var reff = _ref.GetDisplay();
         foreach(Word word in _word){
-            string text = word.GetDisplay();
-            sentance = sentance + " " + text;
+            string text = word.GetDisplay();//get the actual text from the word list
+            sentance = sentance + " " + text;//concat all text into into one string
         }
         Console.WriteLine($"{reff} {sentance}");
         Console.WriteLine($"\nPress enter to continue or type 'quit' to finish");

@@ -11,10 +11,16 @@ public void Hide(){
 }
 public string GetDisplay(){
     if (_isHidden == true){
-        foreach(char letter in _text){
-            _text.Replace(letter, '_');
+        string text = null;
+        List<string> letters = new List<string>();
+        foreach(char character in _text){
+            string letter = character.ToString();
         }
-        return _text;
+        int count = letters.Count();
+        for(int i=0; i<count; i++){
+            text = text + "_";
+        }
+        return text;
     }
     else{
         return _text;
