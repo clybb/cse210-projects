@@ -4,6 +4,8 @@ class Scripture{
     private Reference _ref;
     private List<Word> _word = new List<Word>();
 
+    private int _times;
+
     public Scripture(Reference reff,  string text){
         _ref = reff;
         string[] words = text.Split(' ');
@@ -16,11 +18,24 @@ class Scripture{
             Random random = new Random();
             int randomNmber = random.Next(0, _word.Count());
             var word = _word[randomNmber];
-            word.Hide();
+            if (word.isHidden() == false){
+                word.Hide();
+                _times++;
+            }
+            else{
+                i--;
+            }
         }
     }
     public Boolean IsCompletlyHidden(){
-        return false;
+        if(_times > (_word.Count())){
+            Console.WriteLine("_times");
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
     public void Display(){
         Console.Clear();//clear console
@@ -34,11 +49,16 @@ class Scripture{
         Console.WriteLine($"{reff} {sentance}");
         Console.WriteLine($"\nPress enter to continue or type 'quit' to finish");
         string exit = Console.ReadLine();
-        if (exit == "quit"){
+        if(_times >= (_word.Count())){
             break;
         }
         else{
-            HideWords(3);
+            if (exit == "quit"){
+                break;
+            }
+            else{
+                HideWords(3);
+            }
         }
         }
     }
