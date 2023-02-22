@@ -1,48 +1,41 @@
 class Program {
     static void Main(string[] args) {
-        
-        var divider =  new IntegerDivision();
-        divider.setlhs(10);
-        divider.setrhs(1);
-        divider.DisplayResult();
+        var p = new Person("Caleb");
+        var s = new Student("Caleb", 1166253);
 
-        divider.setlhs(0);
-        divider.setrhs(100);
-        divider.DisplayResult();
-
-        divider.setlhs(5);
-        divider.setrhs(0);
-        divider.DisplayResult();
-
-        divider.setlhs(25);
-        divider.setrhs(5);
-        divider.DisplayResult();
+        Console.WriteLine(p.GetName());
+        Console.WriteLine(s.GetName());
+    //     Console.WriteLine("Hi");
+    //     Console.Write("+");
+    //     Thread.Sleep(500);
+    //     Console.Write("\b \b"); // Erase the + character
+    //     Console.Write("-"); 
+    //     Thread.Sleep(500);
+    //     Console.Write("\b \b"); // Erase the + character
+    //     Console.Write("+"); 
+    //     Console.WriteLine("Bye");
     }
 }
+// parent class, super class, base class
+class Person{
 
-class IntegerDivision {
-    private int _lhs = 1;
-    private int _rhs = 1;
+    private string _name;
 
-    public void setrhs(int newrhs){
-        if (newrhs==0){
-            Console.WriteLine("0 is not allowed, defaulting to 0");
-            _rhs = 1;
-        }
-        else{
-            _rhs = newrhs;
-        }
-    }
-    public void setlhs(int newlhs){
-        _lhs = newlhs;
+    public Person(string name){
+        _name = name;
     }
 
-    public int Result() {
-        return _lhs / _rhs;
+    public string GetName(){
+        return _name;
     }
+}
+// child class
+// sub class
+class Student : Person{
+    private int _iNumber;
 
-    public void DisplayResult() {
-        var result = Result();
-        Console.WriteLine($"{_lhs} divided by {_rhs} is {result}");
+    public Student(string name, int number): base(name){
+        _iNumber = number;
     }
+    
 }
