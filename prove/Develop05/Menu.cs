@@ -1,5 +1,6 @@
 class Menu{
     private List<string> _prompts = new List<string>();
+    private List<Goals> _goals = new List<Goals>();
 
     public Menu(){
         _prompts.Add("1. Create new goal");
@@ -31,23 +32,25 @@ class Menu{
                 int.TryParse(type, out int typeInt);
                 switch(typeInt){
                     case 1:
-                    Simple simple = new Simple();
-                    simple.CreateGoals();
-                    handler.AddGoal(simple);
+                    Simple simple = new Simple("simple");
+                    _goals.Add(simple);
                     break;
                     case 2:
-                    Eternal eternal = new Eternal();
-                    eternal.CreateGoals();
-                    handler.AddGoal(eternal);
+                    Eternal eternal = new Eternal("eternal");
+                    _goals.Add(eternal);
                     break;
                     case 3:
-                    Checklist checklist = new Checklist();
-                    checklist.CreateGoals();
-                    handler.AddGoal(checklist);
+                    Checklist checklist = new Checklist("checklist");
+                    _goals.Add(checklist);
                     break;
                     default:
                     break;
                 }
+                foreach(var goals in _goals){
+                    goals.CreateGoals();
+                    handler.AddGoal(goals);
+                }
+                _goals.RemoveAt(0);
                 break;
                 case 2:
                 Console.WriteLine("The goals are:");
@@ -72,7 +75,7 @@ class Menu{
                 Console.Write("What goal did you acomplish? ");
                 string goal = Console.ReadLine();
                 int.TryParse(goal, out int goalInt);
-                handler.IsComplete(goalInt);
+                handler.IsComplete(goalInt, handler);
                 break;
                 case 6:
                 quit = true;

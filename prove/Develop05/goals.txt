@@ -1,4 +1,6 @@
 1000
-simple,hi,100
-simp,hiiii,100
-simplee,hi,100
+simple,hi,100,simple
+simp,hiiii,100,simple
+simplee,hi,100,simple
+eternal,hiiiiiiii,100,eternal
+checklist,hiiiiii,100,checklist,500,2,3
