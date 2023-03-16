@@ -50,8 +50,8 @@ class Handler{
         }
         using (StreamWriter outputFile = new StreamWriter(_filename)){
                outputFile.WriteLine($"{_totalPoints}");
-        foreach(var goal in _goals){
-            if (goal.GetType() == "checklist"){
+        foreach(var goal in _goals){ 
+            if (goal.GetMyType() == "checklist"){
                outputFile.WriteLine($"{goal.GetName()},{goal.GetDiscription()},{goal.GetPoints()},{goal.GetType()},{goal.GetBonusAmount()},{goal.GetBonusTimes()},{goal.GetTimesTillBonus()}");
             }
             else{

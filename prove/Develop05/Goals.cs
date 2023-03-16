@@ -39,7 +39,7 @@ class Goals{
     }
     public virtual void CreateGoals(){}
 
-    public string GetType(){
+    public string GetMyType(){
         return _type;   
     }
     public virtual int GetBonusAmount(){
