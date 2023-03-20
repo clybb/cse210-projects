@@ -1,9 +1,8 @@
 class Topics{
-
     protected List<string> _quotes = new List<string>();
 
-    public Topics(List<string> quotes){
-        _quotes = quotes;
+    public Topics(){
+
     }
 
     virtual public void DisplayAll(){
@@ -14,7 +13,19 @@ class Topics{
     }
 }
 class Family:Topics{
-    public Family
+    
+    public Family(){
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+        _quotes.Add("this is my quote");
+    }
 }
 class Agency:Topics{
 
