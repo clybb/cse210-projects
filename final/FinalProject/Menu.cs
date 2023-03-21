@@ -1,3 +1,4 @@
+using System;
 class Menu{
     private List<Topics> _topics = new List<Topics>();
 
@@ -22,9 +23,9 @@ class Menu{
     }
 
     public void Display(){
-        Console.Clear();
         bool quit = false;
         while (true){
+            Console.Clear();    
             Console.WriteLine("Options:");
             Console.WriteLine("1. Display random quote");
             Console.WriteLine("2. Display all quotes");
@@ -44,6 +45,7 @@ class Menu{
                     int randInt = random.Next(_topics.Count());
                     Topics randomTopic = _topics[randInt];
                     randomTopic.DisplayRandom();
+                    Thread.Sleep(5);
                     break;
                     case 2:
                     break;

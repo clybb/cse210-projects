@@ -8,7 +8,10 @@
 
     }
     virtual public void DisplayRandom(){
-
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
     }
 }
 class Family:Topics{
@@ -26,13 +29,13 @@ class Family:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Family:");
-        Random random = new Random();
-        int randInt = random.Next(_quotes.Count());
-        string randQuote = _quotes[randInt];
-        Console.WriteLine(randQuote);
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Family:");
+        // Random random = new Random();
+        // int randInt = random.Next(_quotes.Count());
+        // string randQuote = _quotes[randInt];
+        // Console.WriteLine(randQuote);
+    // }
 
     override public void DisplayAll(){
 
@@ -53,9 +56,9 @@ class Agency:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Agency:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Agency:");
+    // }
 
     override public void DisplayAll(){
 
@@ -76,9 +79,9 @@ class Atonement:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Atonement:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Atonement:");
+    // }
 
     override public void DisplayAll(){
 
@@ -99,9 +102,9 @@ class Addiction:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Addiction");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Addiction");
+    // }
 
     override public void DisplayAll(){
 
@@ -122,9 +125,9 @@ class Fasting:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Fasting:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Fasting:");
+    // }
 
     override public void DisplayAll(){
 
@@ -145,9 +148,9 @@ class Revelation:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Revelation:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Revelation:");
+    // }
 
     override public void DisplayAll(){
 
@@ -168,9 +171,9 @@ class Temple:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Temple:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Temple:");
+    // }
 
     override public void DisplayAll(){
 
@@ -191,9 +194,9 @@ class Service:Topics{
         _quotes.Add("this is my quote");
     }
 
-    override public void DisplayRandom(){
-        Console.WriteLine("From topic Service:");
-    }
+    // override public void DisplayRandom(){
+        // Console.WriteLine("From topic Service:");
+    // }
 
     override public void DisplayAll(){
 
