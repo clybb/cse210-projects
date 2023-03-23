@@ -3,14 +3,14 @@ class Menu{
     private List<Topics> _topics = new List<Topics>();
 
     public Menu(){
-        var family = new Family("Family");
-        var agency = new Agency("Agency");
-        var atonement = new Atonement("Atonement");
-        var addiction = new Addiction("Addiction");
-        var fasting = new Fasting("Fasting");
-        var revelation = new Revelation("Revelation");
-        var temple = new Temple("Temple");
-        var service = new Service("Service");
+        var family = new Family();
+        var agency = new Agency();
+        var atonement = new Atonement();
+        var addiction = new Addiction();
+        var fasting = new Fasting();
+        var revelation = new Revelation();
+        var temple = new Temple();
+        var service = new Service();
         _topics.Add(family);
         _topics.Add(agency);
         _topics.Add(atonement);
@@ -58,6 +58,7 @@ class Menu{
                     Console.Write("Please Choose a topic: ");
                     int.TryParse(Console.ReadLine(), out int topicInt);
                     Topics topic = null;
+                    bool skip = false;
                     switch (topicInt){
                         case 1:
                         topic = _topics[0];
@@ -84,15 +85,24 @@ class Menu{
                         topic = _topics[7];
                         break;
                         default:
+                        skip = true;
                         break;
                     }
-                    topic.DisplayRandom();
+                    if(skip == false){
+                        topic.DisplayRandom();
+                    }
+                    else{}
                     break;
                     default:
                     break;
                 }
                 break;
                 case 2:
+                foreach(var topic in _topics){
+                    topic.DisplayAll();
+                }
+                Console.WriteLine("\nPress Enter to continue: ");
+                Console.ReadLine();
                 break;
                 case 3:
                 quit = true;

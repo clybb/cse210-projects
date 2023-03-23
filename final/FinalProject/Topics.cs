@@ -1,29 +1,23 @@
  class Topics{
     protected List<string> _quotes = new List<string>();
 
-    private string _type;
-
-    public Topics(string type){
-        _type = type;
-    }
+    protected string _statement;
 
     public void DisplayAll(){
-
+        Console.WriteLine($"\nTopic: {GetType()}\n");
+        foreach(var quote in _quotes){
+            Console.WriteLine(quote);
+        }
+        Console.WriteLine($"\n{_statement}");
     }
-    public void DisplayRandom(){
-        Console.WriteLine($"\nFrom the Topic {_type}:\n");
-        Random random = new Random();
-        int randInt = random.Next(_quotes.Count());
-        string randQuote = _quotes[randInt];
-        Console.WriteLine(randQuote);
-        Console.WriteLine("\n Press Enter to continue: ");
-        Console.ReadLine();
+    virtual public void DisplayRandom(){
+  
     }
     
 }
 class Family:Topics{
     
-    public Family(string type):base(type){
+    public Family(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -34,12 +28,25 @@ class Family:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = ("position statement");
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Agency:Topics{
 
-    public Agency(string type):base(type){
+    public Agency(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -50,12 +57,25 @@ class Agency:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Atonement:Topics{
 
-    public Atonement(string type):base(type){
+    public Atonement(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -66,12 +86,25 @@ class Atonement:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Addiction:Topics{
 
-    public Addiction(string type):base(type){
+    public Addiction(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -82,12 +115,25 @@ class Addiction:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Fasting:Topics{
 
-    public Fasting(string type):base(type){
+    public Fasting(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -98,12 +144,25 @@ class Fasting:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Revelation:Topics{
 
-    public Revelation(string type):base(type){
+    public Revelation(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -114,12 +173,25 @@ class Revelation:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.Write("\nPress Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Temple:Topics{
 
-    public Temple(string type):base(type){
+    public Temple(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -130,12 +202,25 @@ class Temple:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
 class Service:Topics{
 
-    public Service(string type):base(type){
+    public Service(){
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
@@ -146,6 +231,19 @@ class Service:Topics{
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
         _quotes.Add("\"this is my quote\"");
+        _statement = "position statement";
+    }
+    public override void DisplayRandom(){
+        var type = GetType();
+        Console.WriteLine($"\nFrom the Topic {type}:\n");
+        Random random = new Random();
+        int randInt = random.Next(_quotes.Count());
+        string randQuote = _quotes[randInt];
+        Console.WriteLine(randQuote);
+        Console.WriteLine();
+        Console.WriteLine(_statement);
+        Console.WriteLine("\n Press Enter to continue: ");
+        Console.ReadLine();
     }
 
 }
