@@ -3,14 +3,14 @@ class Menu{
     private List<Topics> _topics = new List<Topics>();
 
     public Menu(){
-        var family = new Family();
-        var agency = new Agency();
-        var atonement = new Atonement();
-        var addiction = new Addiction();
-        var fasting = new Fasting();
-        var revelation = new Revelation();
-        var temple = new Temple();
-        var service = new Service();
+        var family = new Family("Family");
+        var agency = new Agency("Agency");
+        var atonement = new Atonement("Atonement");
+        var addiction = new Addiction("Addiction");
+        var fasting = new Fasting("Fasting");
+        var revelation = new Revelation("Revelation");
+        var temple = new Temple("Temple");
+        var service = new Service("Service");
         _topics.Add(family);
         _topics.Add(agency);
         _topics.Add(atonement);
@@ -36,18 +36,57 @@ class Menu{
                 case 1:
                 Console.Clear();
                 Console.WriteLine("1. Random topic");
-                Console.WriteLine("1. Choose topic");
+                Console.WriteLine("2. Choose topic");
                 Console.Write("Please select an option: ");
-                int.TryParse(Console.ReadLine(), out int topic);
-                switch (topic){
+                int.TryParse(Console.ReadLine(), out int choice);
+                switch (choice){
                     case 1:
                     Random random = new Random();
                     int randInt = random.Next(_topics.Count());
                     Topics randomTopic = _topics[randInt];
                     randomTopic.DisplayRandom();
-                    Thread.Sleep(5);
                     break;
                     case 2:
+                    Console.WriteLine("1. Family");
+                    Console.WriteLine("2. Agency");
+                    Console.WriteLine("3. Atonement");
+                    Console.WriteLine("4. Addiction");
+                    Console.WriteLine("5. Fasting");
+                    Console.WriteLine("6. Revelation");
+                    Console.WriteLine("7. Temple");
+                    Console.WriteLine("8. Service");
+                    Console.Write("Please Choose a topic: ");
+                    int.TryParse(Console.ReadLine(), out int topicInt);
+                    Topics topic = null;
+                    switch (topicInt){
+                        case 1:
+                        topic = _topics[0];
+                        break;
+                        case 2:
+                        topic = _topics[1];
+                        break;
+                        case 3:
+                        topic = _topics[2];
+                        break;
+                        case 4:
+                        topic = _topics[3];
+                        break;
+                        case 5:
+                        topic = _topics[4];
+                        break;
+                        case 6:
+                        topic = _topics[5];
+                        break;
+                        case 7:
+                        topic = _topics[6];
+                        break;
+                        case 8:
+                        topic = _topics[7];
+                        break;
+                        default:
+                        break;
+                    }
+                    topic.DisplayRandom();
                     break;
                     default:
                     break;
