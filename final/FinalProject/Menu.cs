@@ -98,6 +98,7 @@ class Menu{
                 }
                 break;
                 case 2:
+                Console.Clear();
                 foreach(var topic in _topics){
                     topic.DisplayAll();
                 }

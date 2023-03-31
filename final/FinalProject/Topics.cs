@@ -28,7 +28,7 @@ class Family:Topics{
         _quotes.Add("\"What is our responsibility as peaceful disciples of Jesus Christ? Let us live God’s commandments, teach them to our children, and share them with \nothers who are willing to listen.\"(The Personal Journey of a child of god, Elder Rasband April 2021 General Conference)\n");
         _quotes.Add("\"When asked where meaning comes in life, most people rank family first. This includes family living and gone before.\"(We Each Have a Story, \nElder Gong April 2022 General Conference)\n");
         _quotes.Add("\"God wants our families to be happy and forever. Forever is too long if we make each other unhappy. Happy is too short if cherished relationships \nstop with this life. Through sacred covenants, Jesus Christ offers His love, power, and grace to change us and heal our relationships.\"\n(We Each Have a Story, Elder Gong April 2022 General Conference)\n");
-        _statement = ("position statement");
+        _statement = ("The family is an important part of God's plan of salvation. When people are brought into this world through a family with loving parents they can\nlearn so much more than they otherwise could. Everyone has a role to play in a family. Only through God can you have a happy marriage because no \nfamily has ever been or is ever going to be a perfect one.The restored gospel of Jesus Christ proclaims the principle of full partnership between \nwoman and man, both in mortal life and in the eternities.");
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Family:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -56,7 +56,7 @@ class Agency:Topics{
         _quotes.Add("\"Let us demonstrate our love for the Lord through wholehearted, voluntary obedience.\"(Valiant Discipleship in the Latter Days, Elder Klebingat April\n2022 General Conference)\n");
         _quotes.Add("\"If we really want to be valiant disciples of Christ, we will find a way.\"(Valiant Discipleship in the Latter Days, Elder Klebingat April 2022 \nGeneral Conference)\n");
         _quotes.Add("\"It has been said that “every day is election day, for throughout every hour of every day we each exercise our right of choice.\"(The Agency of Man, \nElder Vandenberg April 1973 General Conference)\n");
-        _statement = "position statement";
+        _statement = "It is emphasized that God's commandments and covenants are not intended to control but to guide individuals towards their own personal growth and \nexperience. The consequences of our choices, whether good or bad, will be accounted for in the end. It is important to voluntarily and joyfully obey\nGod's commandments and live by every word that proceeds from Him. Being a valiant disciple of Christ requires wholehearted obedience and a \ndetermination to make the right choices every day.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Agency:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -84,7 +84,7 @@ class Atonement:Topics{
         _quotes.Add("\"that we have an “eternal destiny.” Such a destiny will not be forced on us. After death, we will receive what we have qualified for and “enjoy \n[only] that which [we] are willing to receive.” Realizing our eternal destiny is dependent on our choices. It requires making and keeping sacred \ncovenants.\"(Your Divine Nature and Eternal Destiny, Elder Renlund April 2022 General Conference)\n");
         _quotes.Add("\"Alma described this part of the Savior’s Atonement: “And he shall go forth, suffering pains and afflictions and temptations of every kind; and\nthis that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people”\"(Strengthened by the Atonement\nof Jesus Christ, Elder Oaks October 2015 General Conference)\n");
         _quotes.Add("\"God’s message is that, as President Russell M. Nelson has taught, “Repentance … is a process.” Repentance may take time and repeated effort, so \nforsaking sin and having “no more disposition to do evil, but to do good continually” are lifetime pursuits.\"(Worthiness is not Flawlessness, \nElder Wilcox October 2021 General Conference)\n");
-        _statement = "position statement";
+        _statement = "The atonement of Jesus Christ is a central doctrine in the teachings of The Church of Jesus Christ of Latter-day Saints, and it was a recurring \ntheme in the October 2021 and October 2022 General Conferences. Church leaders emphasized the importance of repentance, faith, and following \nJesus Christ as the way to receive the blessings of the atonement. They also highlighted the role of ministering and encouraging others to come unto\nChrist, and the importance of making and keeping sacred covenants to realize our eternal destiny. Ultimately, the atonement of Jesus Christ provides \nhope and comfort in difficult times, and is the means by which we can become like our Heavenly Father and inherit all He has.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Atonement:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -112,7 +112,7 @@ class Addiction:Topics{
         _quotes.Add("\"Most of the changes in our spiritual lives—both positive and negative—happen gradually, a step at a time.\"(Daily Restoration, Elder Uchtdorf \nOctober 2021 General Conference)\n");
         _quotes.Add("\"Some mistakenly receive the message that they are not worthy to participate fully in the gospel because they are not completely free of bad habits.\nGod’s message is that worthiness is not flawlessness.\"(Worthiness is not Flawlessness, Elder Wilcox October 2021 General Conference)\n");
         _quotes.Add("\"“You’re not a hypocrite because you have a bad habit you are trying to break. You are a hypocrite if you hide it, lie about it, or try to convince\nyourself the Church has the problem for maintaining such high standards. Being honest about your actions and taking steps to move forward is not\nbeing a hypocrite.\"(Worthiness is not Flawlessness, Elder Wilcox October 2021 General Conference)\n");
-        _statement = "position statement";
+        _statement = "These quotes emphasize the Savior's understanding and compassion, the importance of repentance and change, and the gradual process of growth and \nimprovement. They also reject the notion that worthiness requires flawlessness and encourage honesty and accountability in addressing bad habits.\nThrough these messages, individuals are invited to turn to the Savior and rely on His strength to overcome addiction and other obstacles in their \nlives.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Addiction:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -140,7 +140,7 @@ class Fasting:Topics{
         _quotes.Add("\"My dear brothers and sisters, Alma received his witness by fasting and prayer more than 2,000 years ago, and we may have the same sacred experience\ntoday.\"(The Power of a Personal Testimony, Elder Uchtdorf October 2006 General Conference)\n");
         _quotes.Add("\"Fasting, coupled with mighty prayer, is powerful. It can fill our minds with the revelations of the Spirit. It can strengthen us against times of\ntemptation.\"(The Law of the Fast, Elder Wirthlin April 2001 General Conference)\n");
         _quotes.Add("\"If we want our fasting to be more than just going without eating, we must lift our hearts, our minds, and our voices in communion with our Heavenly\nFather.\"(The Law of the Fast, Elder Wirthlin April 2001 General Conference)\n");
-        _statement = "position statement";
+        _statement = "Fasting has a long history in the Bible and has been practiced by biblical heroes such as Moses, David, and Daniel. The Savior Himself declared that\ncertain things can only be overcome by prayer and fasting. Fasting can help us overcome personal flaws and sins and bring increased spiritual power \nwhen coupled with prayer. If the purpose of our fast is to be more effective in teaching the gospel and serving others, we are surely striving to \nhelp others. Fasting can bring us spiritual strength and prepare us to be resistant to the trials of this life. It can also fill our minds with\nrevelations from the Spirit and strengthen us against times of temptation. Ultimately, fasting and prayer are powerful tools that can help us gain \npersonal testimony and receive guidance from our Heavenly Father.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Fasting:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -168,7 +168,7 @@ class Revelation:Topics{
         _quotes.Add("\"it is “the Holy Ghost ... [that] will show [us] all things [that we] should do.” When we are unsure or uneasy, we can ask God for help.\"(A \nframework for personal Revelation, Elder Renlund October 2022 General Conference)\n");
         _quotes.Add("\"Speculation will not lead to greater spiritual knowledge, but it can lead us to deception or divert our focus from what has been revealed.\"(Your \nDivine Nature and Eternal Destiny, Elder Renlund April 2022 General Conference)\n");
         _quotes.Add("\"Many on earth today are only kept from the truth because they know not where to find it.\"(What is True, President Nelson October 2022 General \nConference)\n");
-        _statement = "position statement";
+        _statement = "Personal revelation can be received through prayer, scripture study, and attending the temple. It is important to seek for personal revelation with\npure motives, and to be willing to act upon the guidance received. The Holy Ghost plays a key role in the process of receiving personal revelation \nand can help individuals discern truth from error. It is important to avoid speculation and focus on what has been revealed. Ultimately, the goal \nof seeking personal revelation is to align our divine nature with our eternal destiny.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Revelation:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -196,7 +196,7 @@ class Temple:Topics{
         _quotes.Add("\"It is in the temple that we can receive the assurance of loving family connections that will continue after death and last for eternity.\"(I Love to\nSee the Temple, President Eyring April 2021 General Conference)\n");
         _quotes.Add("\"there came into my mind, not in my own voice, these words: “No, you have never been here before. You are remembering a moment before you were born.\nYou were in a sacred place like this.”\"(I Love to See the Temple, President Eyring April 2021 General Conference)\n");
         _quotes.Add("\"Our family was ready to leave that blessed time and place because a prophet, in a holy temple, a place of revelation, saw a future event for which\nwe then were prepared.\"(I Love to See the Temple, President Eyring April 2021 General Conference)\n");
-        _statement = "position statement";
+        _statement = "The temple is a sacred place where individuals can receive heavenly power and make covenants with God. These covenants provide strength to withstand\ntrials and temptations in life. The foundation of the temple, like our spiritual foundation, needs to be strong and resilient to withstand the \ninevitable settling and earthquakes of life. Temple ordinances and covenants are ancient, dating back to Adam and Eve, and they provide assurance of\nloving family connections that will last for eternity. In the temple, individuals can receive revelation and be prepared for future events. \nUltimately, the temple is the house of the Lord and is filled with His power.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Temple:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
@@ -224,7 +224,7 @@ class Service:Topics{
         _quotes.Add("\"First, we are commanded to serve one another. The first commandment is to love God. “And the second is like unto it, Thou shalt love thy neighbour\nas thyself.”\"(Service, Elder Snow October 2007 General Conference)\n");
         _quotes.Add("\"service is to be given unselfishly, with no thought of personal gain or reward.\"(Service, Elder Snow October 2007 General Conference)\n");
         _quotes.Add("\"Rather, look for ways to bless the lives of others through seemingly simple acts of service. It is better to do even things of little consequence\nthan to do nothing at all.\"(Service, Elder Snow October 2007 General Conference)\n");
-        _statement = "position statement";
+        _statement = "President Oaks and Elder Snow teach that service is a commandment from God and that it should be given unselfishly, without thought of personal gain\nor reward. Elder Christofferson notes that much of our sense of belonging comes from our service to others and the Lord. Elder Gong compares the\nChurch to an inn, a refuge for all from life's bruises and storms. Additionally, Elder Oaks notes that service is necessary for cooperative efforts\nthat benefit the larger community, and the Church is the sponsor and organizer of much of this service. In conclusion, service is an integral \npart of the teachings and practices of the Church of Jesus Christ of Latter-day Saints.";
     }
     public override void DisplayRandom(){
         Console.WriteLine("\n{0}{2}From the Topic Service:{1}\n", "\u001b[1m", "\u001b[0m", "\u001b[31m");
